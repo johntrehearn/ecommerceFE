@@ -20,4 +20,18 @@ class Categories {
             }
         });
     }
-    }
+
+    getSingleCategory(slug) {
+        $.ajax({
+            url: this.apiUrl + 'products/category/electronics',
+            type: 'GET',
+            success: function (data) {
+                console.log(data);
+                $(data).each(function (index, category) {
+             
+        });
+
+    }});
+
+    };
+};

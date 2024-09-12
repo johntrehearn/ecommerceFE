@@ -6,6 +6,8 @@ $(function() {
 var categoriesSetup = function() {
     let categories = new Categories();
     categories.getAllCategories();
+    categories.getSingleCategory('electronics');
+
 }
 
 var productsSetup = function() {
