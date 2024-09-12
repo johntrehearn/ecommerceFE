@@ -4,9 +4,8 @@ $(function() {
 })
 
 var categoriesSetup = function() {
-    console.log('categories here');
-    // categories = new Categories();
-    // categories.init();
+    let categories = new Categories();
+    categories.getAllCategories();
 }
 
 var productsSetup = function() {
