@@ -10,7 +10,8 @@ class Categories {
             success: function (data) {
                 console.log(data);
                 $(data).each(function (index, category) {
-                $('.categories').append('<a class="dropdown-item" href="/category.html?category=' + category + '">'
+                $('.categories').append('<a class="dropdown-item" href="/category.html?category='
+                    + encodeURIComponent(category) + '">'
                     +  toTitleCase(category) + '</a>');
             });
             },
