@@ -9,26 +9,13 @@ class Categories {
             type: 'GET',
             success: function (data) {
                 console.log(data);
+                $(data).each(function (index, category) {
+                $('.categories').append('<a class="dropdown-item" href="/category.html?category=' + category + '">' + category + '</a>');
+            });
             },
             error: function (error) {
                 console.log('Error ${error}');
             }
         });
     }
-
-    getCategories() {
-        $.get('http://localhost:3000/categories', (data) => {
-            this.categories = data;
-            this.renderCategories();
-        });
     }
-
-    renderCategories() {
-        let categories = this.categories;
-        let categoriesList = $('#categories-list');
-        categories.forEach((category) => {
-            let categoryItem = $(`<li>${category.name}</li>`);
-            categoriesList.append(categoryItem);
-        });
-    }
-}
