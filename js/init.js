@@ -15,14 +15,15 @@ $(function() {
 var categoriesSetup = function() {
     let categories = new Categories();
     categories.getAllCategories();
-    categories.getSingleCategory(decodeURIComponent(urlParam('category')));
+    if (urlParam('category')){
+        categories.getSingleCategory(decodeURIComponent(urlParam('category')));
+    }
 
 }
 
 var productsSetup = function() {
-    console.log('products here');
-    // categories = new Categories();
-    // categories.init();
+    let products = new Products();
+    products.getSingleProduct(1);
 }
 
 function loadScript(url, callback) {
