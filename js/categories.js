@@ -27,7 +27,11 @@ class Categories {
             type: 'GET',
             success: function (data) {
                 console.log(data);
-                $(data).each(function (index, category) {
+                $(data).each(function (index, product) {
+                    $('.products').append(
+                        '<div class="col-md-3"><a href="/product.html?productid=' + product.id +'"><img src="' + product.image + '" class="img-fluid">' + product.title + "</a></div>"
+                    );
+                    
              
         });
 
