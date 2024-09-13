@@ -15,7 +15,6 @@ $(function() {
 var categoriesSetup = function() {
     let categories = new Categories();
     categories.getAllCategories();
-    console.log(decodeURIComponent(urlParam('category')));
     categories.getSingleCategory(decodeURIComponent(urlParam('category')));
 
 }
