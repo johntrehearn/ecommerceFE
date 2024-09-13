@@ -15,7 +15,8 @@ $(function() {
 var categoriesSetup = function() {
     let categories = new Categories();
     categories.getAllCategories();
-    categories.getSingleCategory('electronics');
+    console.log(decodeURIComponent(urlParam('category')));
+    categories.getSingleCategory(decodeURIComponent(urlParam('category')));
 
 }
 
@@ -40,3 +41,13 @@ function toTitleCase(str) {
         return match.toUpperCase();
     });
 };
+
+function urlParam(name) {
+    var results = new RegExp('[?&]' + name + "=([^&#]*)").exec(window.location.href);
+    if (results == null){
+       return null;
+    }
+    else{
+       return results[1] || 0;
+    }
+}

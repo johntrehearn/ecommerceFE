@@ -23,7 +23,7 @@ class Categories {
 
     getSingleCategory(slug) {
         $.ajax({
-            url: this.apiUrl + 'products/category/electronics',
+            url: this.apiUrl + 'products/category/' + slug,
             type: 'GET',
             success: function (data) {
                 console.log(data);
