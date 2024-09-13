@@ -1,3 +1,12 @@
+$.get('templates/navigation.html', function(data) {
+    $('#nav-placeholder').replaceWith(data);
+});
+
+$.get('templates/footer.html', function(data) {
+    $('#footer-placeholder').replaceWith(data);
+});
+
+
 $(function() { 
     loadScript('js/categories.js', categoriesSetup);
     loadScript('js/products.js', productsSetup);
