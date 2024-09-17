@@ -23,7 +23,7 @@ var categoriesSetup = function() {
 
 var productsSetup = function() {
     let products = new Products();
-    products.getSingleProduct(1);
+    products.getSingleProduct(urlParam('productid'));
 }
 
 function loadScript(url, callback) {
